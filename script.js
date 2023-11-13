@@ -16,40 +16,40 @@ const play = (playerSel, computerSel) => {
         return 'Tie';
     }
     if (playerSel === 'paper' && computerSel === 'rock') {
-        // playerScore ++;
+        playerScore++;
         return 'You win! Paper beats rock';
     } else if (playerSel === 'paper' && computerSel === 'scissors') {
-        // computerScore++;
+        computerScore++;
         return 'You lose! Scissors beats Paper';
     } else if (playerSel === 'rock' && computerSel === 'paper') {
         computerScore++;
         return 'You lose! Paper beats rock';
     } else if (playerSel === 'rock' && computerSel === 'scissors') {
-        // playerScore ++;
+        playerScore++;
         return 'You win! rock beats Scissors';
     } else if (playerSel === 'scissors' && computerSel === 'rock') {
-        // computerScore++;
+        computerScore++;
         return 'You lose! rock beats Scissors';
     } else if (playerSel === 'scissors' && computerSel === 'paper') {
-        // playerScore ++;
+        playerScore++;
         return 'You win! Scissors beats Paper';
     }
 }
 
 
-// console.log(play(player,getComputerChoice()));
+console.log(play(player,getComputerChoice()));
 
 
-const game = () => {
-    for (let i = 0; i < 5; i++) {
-        return play(player,getComputerChoice());
+// const game = () => {
+//     for (let i = 0; i < 5; i++) {
+//         play(player,getComputerChoice());
          
-    }
+//     }
 
-    console.log(playerScore);
-    console.log(computerScore);
+//     console.log(playerScore);
+//     console.log(computerScore);
     
 
 
-}
-console.log(game());
+// }
+// console.log(game());
