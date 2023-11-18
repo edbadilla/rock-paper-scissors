@@ -1,55 +1,50 @@
 // create a function to get a random computer's choice
 const choices = ['rock', 'paper', 'scissors'];
-const player = prompt("Elije entre 'rock', 'paper' o 'scissors'").toLowerCase();
-
 const getComputerChoice = () => {
     let random = Math.floor(Math.random() * choices.length);
     return choices[random];
 }
-// console.log(getComputerChoice(choices));
+
+// declare variables for scores
 let playerScore = 0;
 let computerScore = 0;
-// create a function to get user's choice
+
+// create a function to compare user's choice with computer choice
 const play = (playerSel, computerSel) => {
-    
     if (playerSel === computerSel) {
         return 'Tie';
     }
     if (playerSel === 'paper' && computerSel === 'rock') {
-        playerScore++;
+        playerScore = playerScore + 1;
         return 'You win! Paper beats rock';
     } else if (playerSel === 'paper' && computerSel === 'scissors') {
-        computerScore++;
+        computerScore = computerScore + 1;
         return 'You lose! Scissors beats Paper';
     } else if (playerSel === 'rock' && computerSel === 'paper') {
-        computerScore++;
+        computerScore = computerScore + 1;
         return 'You lose! Paper beats rock';
     } else if (playerSel === 'rock' && computerSel === 'scissors') {
-        playerScore++;
+        playerScore = playerScore + 1;
         return 'You win! rock beats Scissors';
     } else if (playerSel === 'scissors' && computerSel === 'rock') {
-        computerScore++;
+        computerScore = computerScore + 1;
         return 'You lose! rock beats Scissors';
     } else if (playerSel === 'scissors' && computerSel === 'paper') {
-        playerScore++;
+        playerScore = playerScore + 1;
         return 'You win! Scissors beats Paper';
     }
 }
 
 
-console.log(play(player,getComputerChoice()));
-
-
-// const game = () => {
-//     for (let i = 0; i < 5; i++) {
-//         play(player,getComputerChoice());
+//create a function to play 5 games and output scores
+const game = () => {
+    for (let i = 0; i < 5; i++) {
+        const player = prompt("Elije entre 'rock', 'paper' o 'scissors'").toLowerCase();
+        console.log(play(player,getComputerChoice()));
          
-//     }
-
-//     console.log(playerScore);
-//     console.log(computerScore);
-    
+    }
+    return console.log(`Puntaje del jugador: ${playerScore} Puntaje de la maquina: ${computerScore}`)
+}
 
 
-// }
-// console.log(game());
+game();
