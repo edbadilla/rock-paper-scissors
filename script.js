@@ -43,7 +43,7 @@ const game = () => {
         console.log(play(player,getComputerChoice()));
          
     }
-    return console.log(`Puntaje del jugador: ${playerScore} Puntaje de la maquina: ${computerScore}`)
+    return console.log(`Puntaje del jugador: ${playerScore} \nPuntaje de la maquina: ${computerScore}`)
 }
 
 
